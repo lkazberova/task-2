@@ -17,7 +17,7 @@
             initialX = x,
             initialY = y,
             isEnd = false,
-            path;
+            path = [];
 
         function makeWave(matrix, x, y, k) {
             if (isEnd || !checkPointInMatrix(matrix, x, y)) {
@@ -87,6 +87,7 @@
 
         makeWave(pathMatrix, x, y, 1);
 
+        pathMatrix = null;
         return path.reverse();
     }
 
